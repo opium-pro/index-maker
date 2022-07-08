@@ -1,0 +1,16 @@
+{
+  "name": "index-maker",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "bin/index.mjs",
+  "scripts": {
+    "start": "index-maker",
+    "release": "npm publish"
+  },
+  "bin": {
+    "index-maker": "bin/index.js"
+  },
+  "author": "opium.pro",
+  "license": "MIT"
+}
