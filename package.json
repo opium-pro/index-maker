@@ -1,13 +1,10 @@
 {
   "name": "index-maker",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "2kb zero dependency library to create index.js files automatically",
   "type": "module",
-  "main": "bin/index.mjs",
-  "scripts": {
-    "start": "index-maker",
-    "release": "npm publish"
-  },
+  "main": "bin/index.js",
+  "keywords": ["index.js", "index.ts", "create index"],
   "bin": {
     "index-maker": "bin/index.js"
   },
