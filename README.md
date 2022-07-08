@@ -21,4 +21,4 @@
 
 > This is ESM module only
 
-> Default exports are not supported
+> Default exports will rewrite each other
