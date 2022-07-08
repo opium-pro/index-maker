@@ -7,7 +7,7 @@ const files = hideBin(process.argv)
 
 let target = extractParam(files, '-i') || 'index.js'
 let extention = extractParam(files, '-x') || target.split('.').slice(-1).join()
-let exportFolders = extractParam(files, '-f') || false
+let exportFolders = extractParam(files, '-f', true) || false
 
 const result = {}
 

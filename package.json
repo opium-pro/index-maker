@@ -1,6 +1,6 @@
 {
   "name": "index-maker",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "2kb zero dependency library to create index.js files automatically",
   "type": "module",
   "main": "bin/index.js",

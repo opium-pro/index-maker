@@ -10,7 +10,7 @@ export function extractParam(list, key, boolean = false) {
   const targetIndex = list.indexOf(key)
   let result
   if (targetIndex >= 0) {
-    result = list[targetIndex + boolean ? 0 : 1]
+    result = list[targetIndex + (boolean ? 0 : 1)]
     list.splice(targetIndex, boolean ? 1 : 2)
   }
   return result
