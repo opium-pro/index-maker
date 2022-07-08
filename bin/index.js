@@ -5,9 +5,9 @@ import { hideBin, toSnakeCase, extractParam } from './utils.js'
 
 const files = hideBin(process.argv)
 
-let target = extractParam(files, '-i') || 'index.js'
-let extention = extractParam(files, '-x') || target.split('.').slice(-1).join()
-let exportFolders = extractParam(files, '-f', true) || false
+const target = extractParam(files, '-i') || 'index.js'
+const extention = extractParam(files, '-x') || target.split('.').slice(-1).join()
+const exportFolders = extractParam(files, '-f', true) || false
 
 const result = {}
 
