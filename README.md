@@ -1,10 +1,6 @@
 # Index Maker
 2kb zero dependency library to create index.js files automatically
 
-> This is ESM module only
-
-> Default exports are not supported
-
 1. Install the package
 
 ```npm i -D index-maker```
@@ -20,3 +16,9 @@
 4. If you want to export also from inner folders, use flag `-f`
 
 ```index-maker src/**/*.ts -f```
+
+---
+
+> This is ESM module only
+
+> Default exports are not supported
