@@ -21,7 +21,7 @@ for (const filePath of files) {
 
   if (grandParentFolder && exportFolders) {
     result[parentTargetPath] ||= []
-    result[parentTargetPath].unshift(`export * as ${toSnakeCase(parentFolder)} from './${parentFolder}/${target}'\n`)
+    result[parentTargetPath].unshift(`export * as ${toSnakeCase(parentFolder)} from './${parentFolder}/${target.split('.').slice(0,-1).join('.')}.${extention}'\n`)
   }
 
   if (fileName === target.split('.').slice(0, -1).join('.')) {
