@@ -11,7 +11,7 @@
 
 3. Optionally specify index file name with flag `-i` and extention of import files `-x` (you might need it to work with typescript)
 
-```index-maker src/**/*.ts -f index.ts -x js```
+```index-maker src/**/*.ts -i index.ts -x js```
 
 4. If you want to export also from inner folders, use flag `-f`
 
