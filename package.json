@@ -1,12 +1,16 @@
 {
   "name": "index-maker",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "2kb zero dependency library to create index.js files automatically",
   "type": "module",
   "main": "bin/index.js",
   "keywords": ["index.js", "index.ts", "create index"],
   "bin": {
     "index-maker": "bin/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opium-pro/index-maker.git"
   },
   "author": "opium.pro",
   "license": "MIT"
