@@ -43,7 +43,3 @@ for (const targetPath in result) {
   const text = result[targetPath]
   fs.writeFileSync(targetPath, Array.from(new Set(text)).join('\n'))
 }
-
-if (!Object.keys(result).length) {
-  fs.writeFileSync(targetPath, '')
-}
