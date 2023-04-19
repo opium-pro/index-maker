@@ -8,6 +8,7 @@ const files = hideBin(process.argv)
 const target = extractParam(files, '-i') || 'index.js'
 const extention = extractParam(files, '-x') || target.split('.').slice(-1).join()
 const exportFolders = extractParam(files, '-f', true) || false
+const exportDefaults = extractParam(files, '-d', true) || false
 
 const result = {}
 
@@ -30,6 +31,9 @@ for (const filePath of files) {
 
   result[targetPath] ||= []
   result[targetPath].push(`export * from './${fileName}.${extention}'`)
+
+  exportDefaults && 
+    result[targetPath].push(`export { default as ${toSnakeCase(fileName)} } from './${fileName}.${extention}'`)
 }
 
 for (const targetPath in result) {
