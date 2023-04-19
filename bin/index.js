@@ -6,7 +6,7 @@ import { hideBin, toSnakeCase, extractParam } from './utils.js'
 const files = hideBin(process.argv)
 
 const target = extractParam(files, '-i') || 'index.js'
-const extention = extractParam(files, '-x') || target.split('.').slice(-1).join()
+const setExtention = extractParam(files, '-x')
 const exportFolders = extractParam(files, '-f', true) || false
 const exportDefaults = extractParam(files, '-d', true) || false
 
@@ -15,10 +15,13 @@ const result = {}
 for (const filePath of files) {
   const parentPath = filePath.split('/').slice(0, -1).join('/')
   const fileName = filePath.split('/').slice(-1).join('/').split('.').slice(0, -1).join('.')
+  const fileExtention = filePath.split('.').pop()
   const targetPath = `${parentPath}/${target}`
   const parentFolder = parentPath.split('/').slice(-1).join()
   const grandParentFolder = parentPath.split('/').slice(0, -1).join('/')
   const parentTargetPath = `${grandParentFolder}/${target}`
+
+  const extention = setExtention || fileExtention || target.split('.').slice(-1).join()
 
   if (grandParentFolder && exportFolders) {
     result[parentTargetPath] ||= []
